@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}{{ announcement.title }}{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <article class="card shadow-lg border-0">
+    <div class="card-body">
+      <h1 class="card-title mb-2">{{ announcement.title }}</h1>
+      <p class="text-muted small mb-4">{{ announcement.date }}</p>
+
+      <div class="content">
+        <p id="short-text">
+          {{ announcement.content|slice:":80" }}...
+        </p>
+        <p id="full-text" style="display: none;">
+          {{ announcement.content }}
+        </p>
+        <button id="toggle-btn" class="btn btn-outline-primary btn-sm">Read More</button>
+      </div>
+
+      <hr class="my-4">
+      <a href="{% url 'announcements' %}" class="btn btn-secondary">← Back to Announcements</a>
+    </div>
+  </article>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const shortText = document.getElementById("short-text");
+  const fullText = document.getElementById("full-text");
+  const toggleBtn = document.getElementById("toggle-btn");
+
+  toggleBtn.addEventListener("click", function() {
+    if (fullText.style.display === "none") {
+      fullText.style.display = "block";
+      shortText.style.display = "none";
+      toggleBtn.textContent = "Show Less";
+    } else {
+      fullText.style.display = "none";
+      shortText.style.display = "block";
+      toggleBtn.textContent = "Read More";
+    }
+  });
+});
+</script>
+{% endblock %}

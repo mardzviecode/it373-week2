@@ -1,0 +1,208 @@
+/* Base layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background: #333;
+    padding: 1rem;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    padding: 2rem;
+}
+
+/* Announcements */
+.announcements-list {
+    list-style: none;
+    padding: 0;
+}
+
+.announcements-list li {
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.announcements-list li:hover {
+    transform: scale(1.02);
+}
+
+.announcement-link {
+    display: block;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-left: 5px solid #007BFF;
+    text-decoration: none;
+    color: inherit;
+}
+
+.announcement-link h3 {
+    margin: 0 0 .5rem;
+    color: #007BFF;
+}
+
+.announcement-link p {
+    margin: 0 0 .5rem;
+}
+
+.announcement-link .date {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* --- Error Pages --- */
+
+/* Shared error styling */
+.error-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* 404 */
+.error-404 {
+    background: #0f1724;
+    color: #e6eef8;
+}
+
+.error-404 .card {
+    background: #1e293b;
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.error-404 .code {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #60a5fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-404 .btn {
+    padding: 0.5rem 0.9rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.error-404 .btn-primary {
+    background: #60a5fa;
+    color: #02204a;
+}
+
+.error-404 .btn-ghost {
+    border: 1px solid #60a5fa;
+    color: #60a5fa;
+}
+
+/* 500 */
+.error-500 {
+    background: #0b1220;
+    color: #ecf1f8;
+}
+
+.error-500 .wrap {
+    background: #1e293b;
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 700px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.error-500 .error-num {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fb7185;
+}
+
+.error-500 .btn-primary {
+    display: inline-block;
+    padding: 0.5rem 0.9rem;
+    border-radius: 6px;
+    background: #fb7185;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+.announcement-detail {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.announcement-detail h1 {
+    margin-bottom: 0.5rem;
+    color: #007BFF;
+}
+
+.announcement-detail .date {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.announcement-detail .content {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.btn-toggle {
+    padding: 0.5rem 1rem;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-toggle:hover {
+    background: #0056b3;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    color: #007BFF;
+}
