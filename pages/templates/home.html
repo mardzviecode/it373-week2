@@ -4,13 +4,48 @@
 
 {% block content %}
 <div class="container py-5">
-  <div class="card shadow-lg border-0">
+  <!-- Welcome Card -->
+  <div class="card shadow-lg border-0 mb-5">
     <div class="card-body text-center">
       <h1 class="card-title mb-3">Welcome to the Home Page</h1>
       <p class="card-text text-muted">
         This is the content for the homepage. You can add highlights, quick links, or a short introduction here.
       </p>
     </div>
+  </div>
+
+  <!-- Latest Announcements -->
+  <h2 class="mb-4">📢 Latest Announcements</h2>
+  <div class="row g-4">
+    <div class="col-md-6">
+      <a href="{% url 'announcement_detail' 'docs' %}" class="text-decoration-none text-reset">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body">
+            <h5 class="card-title">📚 New Documentation</h5>
+            <p class="card-text text-muted">Updated user guide and developer API docs are now available.</p>
+            <div class="text-muted small">Sept 18, 2025</div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-md-6">
+      <a href="{% url 'announcement_detail' 'event' %}" class="text-decoration-none text-reset">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-body">
+            <h5 class="card-title">🎉 Special Event</h5>
+            <p class="card-text text-muted">Join our virtual anniversary celebration this October 1st!</p>
+            <div class="text-muted small">Sept 15, 2025</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Call to Action -->
+  <div class="text-center mt-5">
+    <a href="{% url 'announcements' %}" class="btn btn-primary btn-lg">
+      View All Announcements →
+    </a>
   </div>
 </div>
 {% endblock %}

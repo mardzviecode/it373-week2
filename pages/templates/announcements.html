@@ -4,8 +4,19 @@
 
 {% block content %}
 <div class="container py-5">
-  <h1 class="mb-4">Latest Announcements</h1>
+  <!-- Intro Card -->
+  <div class="card shadow-lg border-0 mb-5">
+    <div class="card-body text-center">
+      <h1 class="card-title mb-3">📢 Announcements</h1>
+      <p class="card-text text-muted">
+        Stay up to date with the latest news, updates, and events.  
+        Here you’ll find important information about product releases, special events, and more.
+      </p>
+    </div>
+  </div>
 
+  <!-- Announcements List -->
+  <h2 class="mb-4">Latest Announcements</h2>
   <div class="row g-4">
     <div class="col-md-6">
       <a href="{% url 'announcement_detail' 'docs' %}" class="text-decoration-none text-reset">
